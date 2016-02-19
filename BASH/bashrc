@@ -1,0 +1,12 @@
+function __kn(){ ps | grep $1| awk '{print $1}' |xargs kill -9 ;}
+
+function __code {
+   if [ "$@x" != 'x' ]; then
+      (~/Downloads/VSCode-linux-x64/Code "$@" &) &> /dev/null
+   else
+      (~/Downloads/VSCode-linux-x64/Code  &) &> /dev/null
+   fi
+}
+
+alias code='__code'
+alias kn='__kn'
